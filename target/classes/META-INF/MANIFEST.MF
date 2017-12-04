@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Built-By: Administrator
+Class-Path: jetty-all-server-8.2.0.v20160908.jar javax.servlet-3.0.0.v
+ 201112011016.jar javax.security.auth.message-1.0.0.v201108011116.jar 
+ javax.mail.glassfish-1.4.1.v201005082020.jar javax.activation-1.1.0.v
+ 201105071233.jar javax.annotation-1.1.0.v201108011116.jar jetty-jsp-8
+ .2.0.v20160908.jar javax.servlet.jsp-2.2.0.v201112011158.jar org.apac
+ he.jasper.glassfish-2.2.2.v201112011158.jar javax.servlet.jsp.jstl-1.
+ 2.0.v201105211821.jar org.apache.taglibs.standard.glassfish-1.2.0.v20
+ 1112081803.jar javax.el-2.2.0.v201108011116.jar com.sun.el-2.2.0.v201
+ 108011116.jar org.eclipse.jdt.core-3.7.1.jar logback-classic-1.2.3.ja
+ r logback-core-1.2.3.jar slf4j-api-1.7.25.jar
+Build-Jdk: 1.8.0_45
+Created-By: Maven Integration for Eclipse
+Main-Class: com.cjy.suger.main.JettyMain
+
