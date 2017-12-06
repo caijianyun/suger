@@ -8,16 +8,12 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class Config {
-	public void initConfig(){
-		String logPath = getSysPath() + File.separator + "log";
-		System.setProperty("log.path", logPath);
-	}
 	
 	public static Properties getSystemProps()  
     {  
         Properties props = new Properties();  
   
-        InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("server.properties");  
+        InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("suger.properties");  
         try {  
         	if(null != in){
         		props.load(in);  
@@ -33,7 +29,7 @@ public class Config {
 	
 	static InputStream loadOtherResources(){
 		InputStream in = null;
-		String filePath = getSysPath() + File.separator + "conf" + File.separator + "server.properties";
+		String filePath = getSysPath() + File.separator + "conf" + File.separator + "suger.properties";
 		try {
 			in = new FileInputStream(filePath);
 		} catch (FileNotFoundException e) {

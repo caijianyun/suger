@@ -34,6 +34,10 @@
 			<outputDirectory>/conf</outputDirectory>
 		</fileSet>
 		<fileSet>
+			<directory>${project.basedir}/script</directory>
+			<outputDirectory>/script</outputDirectory>
+		</fileSet>
+		<fileSet>
 			<directory>${project.basedir}/resources</directory>
 			<outputDirectory>/resources</outputDirectory>
 		</fileSet>

@@ -4,15 +4,15 @@ import java.util.Properties;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.cjy.suger.config.Config;
+import com.cjy.suger.db.DBConnFactory;
+import com.cjy.suger.db.DBConnection;
+import com.cjy.suger.util.Log;
 
 
 public class JettyMain {
-	private static Logger log = LoggerFactory.getLogger(JettyMain.class);
-
+	
 	public static void main(String[] args) {
 		Properties props = Config.getSystemProps();
 		Object prot = props.get("server.port");
@@ -32,15 +32,16 @@ public class JettyMain {
 		context.setContextPath("/JettyDemo");
 		context.setParentLoaderPriority(true);
 		server.setHandler(context);
-
+		//new DBConnection().connect();
+		DBConnFactory.getInstance();
+		DBConnFactory.reload();
 		try {
 			server.start();
 			// server.join();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("server is  start");
-
+		Log.info("server is  start");
 	}
 
 }
